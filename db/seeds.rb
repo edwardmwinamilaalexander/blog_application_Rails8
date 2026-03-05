@@ -9,7 +9,6 @@
 #   end
 Post.destroy_all
 
-Post.destroy_all
 
 20.times do
   Post.create!(

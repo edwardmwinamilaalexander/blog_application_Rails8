@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Post.destroy_all
+
+Post.destroy_all
+
+20.times do
+  Post.create!(
+    title: Faker::Lorem.sentence(word_count: 5).truncate(100),
+    body: Faker::Lorem.sentence(word_count: 10).truncate(100)
+  )
+end
+
+puts "20 posts created!"
